@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { ThemeEngine } from "@/components/theme-engine";
 import "./globals.css";
 
 const display = Cormorant_Garamond({
@@ -33,11 +34,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{if(location.pathname.indexOf('/admin')===0)return;var t=localStorage.getItem('lbi-store-theme-v1')||'royal-heritage';document.documentElement.dataset.theme=t}catch(e){}})();`,
+          }}
+        />
+      </head>
       <body className={`${display.variable} ${sans.variable}`}>
         <Header />
         <main>{children}</main>
         <Footer />
+        <ThemeEngine />
       </body>
     </html>
   );

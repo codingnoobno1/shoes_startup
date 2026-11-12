@@ -24,3 +24,4 @@ Open `http://localhost:3000`. For low-disk development, rely on the GitHub Actio
 - [Requirements](docs/REQUIREMENTS.md)
 - [Project architecture](docs/PROJECT_ARCHITECTURE.md)
 - [CI/CD plan](docs/CICD.md)
+- [Theme engine and palettes](docs/THEME_ENGINE.md)
