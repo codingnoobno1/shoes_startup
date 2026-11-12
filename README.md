@@ -9,6 +9,7 @@ A mobile-first Next.js App Router storefront for Luca Brasi International. The r
 - GitHub Actions installs dependencies on its temporary runner and performs lint, TypeScript, and production-build checks.
 - The `/admin` dashboard uses clearly labelled hard-coded demo records and is ready for later database/service integration.
 - `/shipping` documents dispatch, tracking, delivery bands, safeguards, and a PIN-code estimate; production serviceability still requires a courier API.
+- Storefront, checkout, delivery, Theme Studio, forms, and administration views are optimized for 320–430 px mobile screens and device safe areas.
 - Razorpay Checkout order creation and immediate server verification are scaffolded, but live fulfilment requires merchant credentials, durable order storage, and idempotent verified webhooks.
 
 ## Local development (optional)

@@ -99,7 +99,7 @@ Build a premium, mobile-first ecommerce storefront that takes visitors directly 
 
 - Next.js App Router with application source in `src/app`.
 - Strict TypeScript and linting.
-- Responsive target: 360 px through large desktop.
+- Responsive target: 320 px through large desktop, including safe-area handling, touch-sized controls, horizontal table containment, and no iOS input zoom.
 - Use optimized images, semantic HTML, and sensible metadata.
 - Target Core Web Vitals: LCP under 2.5 s, INP under 200 ms, CLS under 0.1 at the 75th percentile after production optimization.
 - Do not expose secrets to the browser or repository.

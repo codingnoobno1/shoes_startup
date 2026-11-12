@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Bodoni_Moda, Manrope } from "next/font/google";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
@@ -31,6 +31,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#07162f",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
