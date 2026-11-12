@@ -103,6 +103,7 @@ Build a premium, mobile-first ecommerce storefront that takes visitors directly 
 - Every seeded product shows MRP, sale price, savings, available sizes, colours, and an offer.
 - A product detail route includes gallery controls, variant selection, WhatsApp/Facebook sharing, and a checkout CTA.
 - Distributor, careers, and contact routes contain usable enquiry forms.
+- `/admin` provides a responsive hard-coded operations dashboard for products, orders, customers, enquiries, coupons, and settings, clearly labelled as demo data.
 - `/admin/pricing` demonstrates price, offer, and 20-coupon management in browser storage and clearly labels itself as a prototype.
 - GitHub Actions runs lint, strict TypeScript checks, and a production build.
 

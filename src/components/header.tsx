@@ -18,6 +18,8 @@ export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
+  if (pathname.startsWith("/admin")) return null;
+
   return (
     <>
       <div className="announcement">
@@ -72,8 +74,8 @@ export function Header() {
               <span>↗</span>
             </Link>
           ))}
-          <Link className="mobileAdminLink" href="/admin/pricing" onClick={() => setOpen(false)}>
-            Pricing administration
+          <Link className="mobileAdminLink" href="/admin" onClick={() => setOpen(false)}>
+            Store administration
           </Link>
         </nav>
       )}

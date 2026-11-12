@@ -1,7 +1,13 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export function Footer() {
+  const pathname = usePathname();
+  if (pathname.startsWith("/admin")) return null;
+
   return (
     <footer className="siteFooter">
       <div className="footerTop">
@@ -21,7 +27,7 @@ export function Footer() {
             <h3>Partner</h3>
             <Link href="/become-a-distributor">Become a distributor</Link>
             <Link href="/work-with-us">Work with us</Link>
-            <Link href="/admin/pricing">Admin demo</Link>
+            <Link href="/admin">Admin demo</Link>
           </div>
         </div>
       </div>

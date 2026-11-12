@@ -30,7 +30,8 @@ src/
     page.tsx                 direct-to-shop home
     product/[slug]/          product details
     checkout/                payment-method handoff
-    admin/pricing/           pricing/offers/coupons prototype
+    admin/                   hard-coded operations command centre
+    admin/pricing/           pricing/offers/coupons browser-storage prototype
     about/ contact/ become-a-distributor/ work-with-us/
     globals.css              design system and responsive styles
   components/
@@ -81,7 +82,7 @@ The scaffold uses provider-hosted Razorpay Checkout after commercial review. It 
 
 ## 6. Administration evolution
 
-The current admin page is a UI prototype backed by `localStorage`. Production replaces that adapter with authenticated server actions/API routes and a database/CMS. Use roles such as `catalog_editor` and `admin`, validate changes server-side, and record an audit log.
+The `/admin` command centre is a multi-view UI prototype with hard-coded products, orders, customers, enquiries, analytics, coupon summaries, and settings. `/admin/pricing` persists demo pricing and coupon changes in `localStorage`. Production replaces both adapters with authenticated server actions/API routes and a database/CMS. Use roles such as `catalog_editor`, `operations`, and `admin`, validate changes server-side, and record an audit log.
 
 ## 7. Security baseline
 

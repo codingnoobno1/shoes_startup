@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState, useSyncExternalStore } from "react";
+import Link from "next/link";
 import { dealerCoupons as seededCoupons, products } from "@/data/catalog";
 import {
   type PricingState,
@@ -111,7 +112,7 @@ export function PricingAdmin() {
   return (
     <section className="adminPage">
       <div className="adminHeading">
-        <div><span className="eyebrow">Store operations · prototype</span><h1>Pricing & promotions</h1><p>Manage launch pricing, offer titles, and dealer coupon activation.</p></div>
+        <div><Link className="adminBackLink" href="/admin">← Back to command centre</Link><span className="eyebrow">Store operations · prototype</span><h1>Pricing & promotions</h1><p>Manage launch pricing, offer titles, and dealer coupon activation.</p></div>
         <button className="secondaryButton" type="button" onClick={resetDemo}>Reset demo data</button>
       </div>
 
