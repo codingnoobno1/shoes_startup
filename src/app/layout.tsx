@@ -1,19 +1,20 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Bodoni_Moda, Manrope } from "next/font/google";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { ThemeEngine } from "@/components/theme-engine";
 import "./globals.css";
 
-const display = Cormorant_Garamond({
+const display = Bodoni_Moda({
   subsets: ["latin"],
   variable: "--font-display",
-  weight: ["400", "500", "600"],
+  display: "swap",
 });
 
-const sans = Inter({
+const sans = Manrope({
   subsets: ["latin"],
   variable: "--font-sans",
+  display: "swap",
 });
 
 export const metadata: Metadata = {

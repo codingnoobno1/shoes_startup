@@ -22,6 +22,7 @@ export function Footer() {
             <Link href="/">Shop the edit</Link>
             <Link href="/about">Our story</Link>
             <Link href="/contact">Contact</Link>
+            <Link href="/shipping">Pan-India delivery</Link>
           </div>
           <div>
             <h3>Partner</h3>

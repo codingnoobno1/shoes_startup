@@ -5,6 +5,7 @@ import Image from "next/image";
 import { categories, products } from "@/data/catalog";
 import { SearchIcon, ShieldIcon, TruckIcon } from "@/components/icons";
 import { ProductCard } from "@/components/product-card";
+import { DeliveryChecker } from "@/components/delivery-checker";
 import { useCatalogPricing } from "@/lib/catalog-pricing";
 
 export function Shop() {
@@ -53,7 +54,7 @@ export function Shop() {
       </section>
 
       <section className="trustStrip" aria-label="Shopping assurances">
-        <div><TruckIcon /><span><strong>Complimentary delivery</strong>Above ₹2,999</span></div>
+        <div><TruckIcon /><span><strong>Pan-India tracked delivery</strong>Complimentary above ₹2,999</span></div>
         <div><ShieldIcon /><span><strong>Secure advance payment</strong>Provider-ready checkout</span></div>
         <div><span className="trustMonogram">LB</span><span><strong>Considered quality</strong>Materials selected to endure</span></div>
       </section>
@@ -115,6 +116,29 @@ export function Shop() {
             </button>
           </div>
         )}
+      </section>
+
+      <section className="deliveryExperience" aria-labelledby="delivery-title">
+        <div className="deliveryStory">
+          <span className="eyebrow">Delivered with care · Across India</span>
+          <h2 id="delivery-title">From our house<br />to <em>your doorstep.</em></h2>
+          <p>Every Luca Brasi order is quality-checked, carefully packed, and handed to a tracked courier partner from Yamuna Nagar. You receive useful updates from confirmation through delivery—not vague promises.</p>
+          <div className="deliveryPromises">
+            <div><span>01</span><strong>24–48 hr</strong><small>Quality check and dispatch</small></div>
+            <div><span>02</span><strong>Tracked</strong><small>Email and WhatsApp updates</small></div>
+            <div><span>03</span><strong>Prepaid</strong><small>Secure advance-payment orders</small></div>
+          </div>
+        </div>
+        <div className="deliveryUtility">
+          <DeliveryChecker />
+          <div className="deliveryBands">
+            <div><span>North & major metros</span><strong>2–5 days</strong></div>
+            <div><span>West & Central India</span><strong>3–7 days</strong></div>
+            <div><span>South, East & Northeast</span><strong>5–9 days</strong></div>
+            <div><span>Remote / island locations</span><strong>+2–4 days</strong></div>
+          </div>
+          <a className="deliveryPolicyLink" href="/shipping">Read the complete Pan-India delivery policy <span>→</span></a>
+        </div>
       </section>
 
       <section className="brandStatement">

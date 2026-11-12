@@ -86,6 +86,15 @@ Build a premium, mobile-first ecommerce storefront that takes visitors directly 
 - Production admin routes require authenticated role-based access.
 - Pricing/coupon changes are auditable with actor, timestamp, old value, and new value.
 
+### FR-14 — Pan-India delivery
+
+- Present estimated dispatch and delivery bands from Yamuna Nagar, Haryana.
+- Let customers enter a valid six-digit Indian PIN code for a preliminary regional estimate.
+- Confirm exact PIN-code serviceability, courier, charge, and promised date through a production logistics API before order placement.
+- Provide shipment milestones and a courier tracking link after dispatch.
+- Notify customers through email and WhatsApp/SMS when order confirmation, dispatch, out-for-delivery, delivery, or exception events occur.
+- Clearly explain remote-area delays, delivery attempts, address-change limitations, and visibly damaged parcel handling.
+
 ## 4. Non-functional requirements
 
 - Next.js App Router with application source in `src/app`.
@@ -105,6 +114,7 @@ Build a premium, mobile-first ecommerce storefront that takes visitors directly 
 - Distributor, careers, and contact routes contain usable enquiry forms.
 - `/admin` provides a responsive hard-coded operations dashboard for products, orders, customers, enquiries, coupons, and settings, clearly labelled as demo data.
 - `/admin/pricing` demonstrates price, offer, and 20-coupon management in browser storage and clearly labels itself as a prototype.
+- `/shipping` explains Pan-India dispatch, indicative delivery bands, tracking milestones, and serviceability limitations.
 - GitHub Actions runs lint, strict TypeScript checks, and a production build.
 
 ## 6. Explicit MVP boundaries

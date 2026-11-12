@@ -32,7 +32,7 @@ src/
     checkout/                payment-method handoff
     admin/                   hard-coded operations command centre
     admin/pricing/           pricing/offers/coupons browser-storage prototype
-    about/ contact/ become-a-distributor/ work-with-us/
+    about/ contact/ become-a-distributor/ work-with-us/ shipping/
     globals.css              design system and responsive styles
   components/
     header, footer, shop, product, forms, UI primitives
@@ -96,3 +96,7 @@ The `/admin` command centre is a multi-view UI prototype with hard-coded product
 ## 8. Scaling path
 
 The catalog is deliberately typed and centralized so moving from seed data to a repository/service interface does not require redesigning page components. Add categories as data, not routes. Images should move to object storage/CDN when the catalog grows.
+
+## 9. Delivery integration path
+
+The current PIN-code checker validates the Indian six-digit format and provides a broad regional estimate from a Haryana dispatch origin. It does not promise courier serviceability. Production should replace the estimator with a logistics aggregator API, store shipment and scan events against the order, subscribe to courier webhooks, and send tracking updates through email and WhatsApp/SMS. The checkout must use the provider response—not the browser estimate—for the final delivery promise and charge.

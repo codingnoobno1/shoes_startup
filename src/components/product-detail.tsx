@@ -8,6 +8,7 @@ import { galleryAngles } from "@/data/catalog";
 import { ArrowIcon, ShieldIcon, TruckIcon } from "@/components/icons";
 import { useCatalogPricing } from "@/lib/catalog-pricing";
 import { discountPercent, inr } from "@/lib/money";
+import { DeliveryChecker } from "@/components/delivery-checker";
 
 export function ProductDetail({ product }: { product: Product }) {
   const [activeImage, setActiveImage] = useState(0);
@@ -141,9 +142,11 @@ export function ProductDetail({ product }: { product: Product }) {
           </div>
 
           <div className="detailAssurances">
-            <div><TruckIcon /><span><strong>Complimentary delivery</strong>On this order</span></div>
+            <div><TruckIcon /><span><strong>Pan-India delivery</strong>Tracked from dispatch to doorstep</span></div>
             <div><ShieldIcon /><span><strong>Protected checkout</strong>Secure provider handoff</span></div>
           </div>
+
+          <DeliveryChecker compact />
 
           <details open>
             <summary>Material & construction</summary>

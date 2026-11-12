@@ -1,6 +1,6 @@
 # Luca Brasi International storefront
 
-A mobile-first Next.js App Router storefront for Luca Brasi International. The root URL opens directly to the shop and includes category filtering, rich product cards, product detail galleries, WhatsApp/Facebook sharing, enquiry journeys, a checkout handoff, and a full hard-coded administration command centre at `/admin`.
+A mobile-first Next.js App Router storefront for Luca Brasi International. The root URL opens directly to the shop and includes category filtering, rich product cards, product detail galleries, WhatsApp/Facebook sharing, enquiry journeys, a Pan-India delivery experience, a checkout handoff, and a full hard-coded administration command centre at `/admin`.
 
 ## Project status
 
@@ -8,6 +8,7 @@ A mobile-first Next.js App Router storefront for Luca Brasi International. The r
 - No dependencies were installed locally and no `node_modules` directory was created.
 - GitHub Actions installs dependencies on its temporary runner and performs lint, TypeScript, and production-build checks.
 - The `/admin` dashboard uses clearly labelled hard-coded demo records and is ready for later database/service integration.
+- `/shipping` documents dispatch, tracking, delivery bands, safeguards, and a PIN-code estimate; production serviceability still requires a courier API.
 - Razorpay Checkout order creation and immediate server verification are scaffolded, but live fulfilment requires merchant credentials, durable order storage, and idempotent verified webhooks.
 
 ## Local development (optional)
