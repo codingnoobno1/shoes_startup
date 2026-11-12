@@ -87,6 +87,14 @@ Art-directed palette for artisan narratives, creative campaigns and seasonal edi
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | `#25201E` | `#7E493B` | `#C47055` | `#DDA98D` | `#F1E9DE` | `#FBF7F1` | `#2A2320` | `#786C66` |
 
+### 09 — Marketplace Mosaic
+
+High-density commerce direction for large catalogues, offer-led retail, and rapid category discovery. Unlike the first eight themes, this preset also changes the homepage composition into a marketplace mosaic: one large promotion, four category features, a horizontally responsive deal row, and a service-assurance strip.
+
+| Primary | Secondary | Accent | Accent Soft | Background | Surface | Text | Muted |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `#131A22` | `#0B5C50` | `#FF7A1A` | `#FFD36A` | `#E9EEF1` | `#FFFFFF` | `#111827` | `#667085` |
+
 ## Database integration path
 
 Store only the selected theme ID against the tenant/store configuration, for example `store.theme_id = "noir-atelier"`. Keep the canonical palette definitions in versioned application configuration or a managed theme table. A future admin setting should validate IDs against the theme registry, update the store record, and invalidate the storefront cache. Custom client palettes can later use the same eight-role contract.

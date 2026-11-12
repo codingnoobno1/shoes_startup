@@ -71,7 +71,7 @@ export function ThemeEngine() {
         </header>
 
         <div className="themeStudioBody">
-          <div className="themeStudioIntro"><strong>08 curated directions</strong><p>Each preset uses a complete semantic palette—not a simple accent-colour swap.</p></div>
+          <div className="themeStudioIntro"><strong>{String(storeThemes.length).padStart(2, "0")} curated directions</strong><p>Each preset uses a complete semantic palette—not a simple accent-colour swap.</p></div>
           <div className="themePresetGrid">
             {storeThemes.map((theme) => (
               <button className={`themePreset ${activeId === theme.id ? "active" : ""} ${detailId === theme.id ? "inspecting" : ""}`} onClick={() => setDetailId(theme.id)} key={theme.id}>

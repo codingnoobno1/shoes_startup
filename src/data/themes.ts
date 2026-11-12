@@ -173,6 +173,25 @@ export const storeThemes: StoreTheme[] = [
       { role: "muted", label: "Clay Grey", hex: "#786C66", usage: "Captions and descriptions" },
     ],
   },
+  {
+    id: "marketplace-mosaic",
+    number: "09",
+    name: "Marketplace Mosaic",
+    family: "High-density commerce",
+    description: "A discovery-first shopping portal with a large promotional story, colourful category cards, and compact deal tiles.",
+    bestFor: "Large catalogues, offer-led retail, rapid category discovery",
+    personality: ["Energetic", "Familiar", "Conversion-led"],
+    palette: [
+      { role: "primary", label: "Commerce Navy", hex: "#131A22", usage: "Navigation, utility bars and strong retail contrast" },
+      { role: "secondary", label: "Marketplace Teal", hex: "#0B5C50", usage: "Category navigation and trusted service cues" },
+      { role: "accent", label: "Deal Orange", hex: "#FF7A1A", usage: "Promotions, deal cards and primary actions" },
+      { role: "accentSoft", label: "Offer Gold", hex: "#FFD36A", usage: "Savings, ratings and highlighted offers" },
+      { role: "background", label: "Commerce Cloud", hex: "#E9EEF1", usage: "Dense marketplace canvas" },
+      { role: "surface", label: "Card White", hex: "#FFFFFF", usage: "Product tiles and category modules" },
+      { role: "text", label: "Retail Ink", hex: "#111827", usage: "Bold, direct shopping typography" },
+      { role: "muted", label: "Utility Grey", hex: "#667085", usage: "Secondary labels and supporting details" },
+    ],
+  },
 ];
 
 export function getStoreTheme(id: string) {

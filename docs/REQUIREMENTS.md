@@ -115,6 +115,7 @@ Build a premium, mobile-first ecommerce storefront that takes visitors directly 
 - `/admin` provides a responsive hard-coded operations dashboard for products, orders, customers, enquiries, coupons, and settings, clearly labelled as demo data.
 - `/admin/pricing` demonstrates price, offer, and 20-coupon management in browser storage and clearly labels itself as a prototype.
 - `/shipping` explains Pan-India dispatch, indicative delivery bands, tracking milestones, and serviceability limitations.
+- Theme Studio includes a marketplace-style homepage option with a large promotional tile, category cards, deal tiles, and mobile swipe discovery while retaining Luca Brasi branding.
 - GitHub Actions runs lint, strict TypeScript checks, and a production build.
 
 ## 6. Explicit MVP boundaries

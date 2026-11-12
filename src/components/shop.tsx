@@ -2,11 +2,13 @@
 
 import { useMemo, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { categories, products } from "@/data/catalog";
 import { SearchIcon, ShieldIcon, TruckIcon } from "@/components/icons";
 import { ProductCard } from "@/components/product-card";
 import { DeliveryChecker } from "@/components/delivery-checker";
 import { useCatalogPricing } from "@/lib/catalog-pricing";
+import { discountPercent, inr } from "@/lib/money";
 
 export function Shop() {
   const [category, setCategory] = useState("All");
@@ -28,6 +30,55 @@ export function Shop() {
 
   return (
     <>
+      <section className="marketplaceHome" aria-label="Marketplace-style shopping home">
+        <nav className="marketplaceNav" aria-label="Marketplace categories">
+          <a href="#marketplace-categories"><span>☰</span> All departments</a>
+          <a href="#marketplace-deals">Today&apos;s edit</a>
+          <a href="#marketplace-categories">Leather shoes</a>
+          <a href="#marketplace-categories">Tailoring</a>
+          <a href="#marketplace-categories">Shirts</a>
+          <Link href="/shipping">Pan-India delivery</Link>
+          <Link href="/become-a-distributor">Distributor programme</Link>
+        </nav>
+
+        <div className="marketplaceMosaic" id="marketplace-categories">
+          <Link className="marketplaceLead" href={`/product/${pricedProducts[0].slug}`}>
+            <span className="marketplaceLabel">Private launch event</span>
+            <h1>The Luca Brasi<br />marketplace edit.</h1>
+            <p>Signature menswear at introductory prices.</p>
+            <div className="marketplaceLeadImage"><Image src={pricedProducts[0].image} alt={pricedProducts[0].name} fill sizes="(max-width: 800px) 86vw, 34vw" /></div>
+            <strong>Shop the signature Oxford <span>→</span></strong>
+          </Link>
+
+          <div className="marketplaceFeatureGrid">
+            {pricedProducts.slice(1).map((product, index) => (
+              <Link className={`marketplaceFeature feature-${index + 1}`} href={`/product/${product.slug}`} key={product.id}>
+                <span>{product.category}</span>
+                <h2>{index === 0 ? "Start looking sharp" : index === 1 ? "Everyday, elevated" : index === 2 ? "Finish the occasion" : "Refresh your essentials"}</h2>
+                <div><Image src={product.image} alt={product.name} fill sizes="(max-width: 800px) 70vw, 18vw" /></div>
+                <small>{product.name} →</small>
+              </Link>
+            ))}
+          </div>
+
+          <div className="marketplaceDealRow" id="marketplace-deals">
+            {pricedProducts.map((product, index) => (
+              <Link className={`marketplaceDeal deal-${index + 1}`} href={`/product/${product.slug}`} key={product.id}>
+                <div><span>{product.offer}</span><h3>{product.category}</h3><small>From {inr.format(product.price)} · {discountPercent(product.mrp, product.price)}% off</small></div>
+                <figure><Image src={product.image} alt={product.name} fill sizes="(max-width: 800px) 65vw, 15vw" /></figure>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        <div className="marketplaceServiceBar">
+          <div><strong>Tracked delivery</strong><span>Across India</span></div>
+          <div><strong>Secure advance payment</strong><span>UPI, cards and Google Pay</span></div>
+          <div><strong>Direct assistance</strong><span>From the Luca Brasi team</span></div>
+          <div><strong>Business opportunities</strong><span>Distributor enquiries welcome</span></div>
+        </div>
+      </section>
+
       <section className="hero" aria-labelledby="hero-title">
         <div className="heroCopy">
           <span className="eyebrow">The private launch collection · 2026</span>
