@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { BagIcon, CloseIcon, MenuIcon } from "@/components/icons";
@@ -26,7 +27,9 @@ export function Header() {
       </div>
       <header className="siteHeader">
         <Link className="brand" href="/" aria-label="Luca Brasi International home">
-          <span className="brandMark">LB</span>
+          <span className="brandLogo" aria-hidden="true">
+            <Image src="/brand/luca-brasi-monogram.svg" alt="" width={48} height={48} priority />
+          </span>
           <span className="brandWords">
             <strong>Luca Brasi</strong>
             <small>International</small>

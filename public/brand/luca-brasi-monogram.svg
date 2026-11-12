@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Luca Brasi International monogram</title>
+  <desc id="desc">An interlocking LB monogram inside a fine octagonal gold seal.</desc>
+  <defs>
+    <linearGradient id="gold" x1="22" y1="12" x2="138" y2="148" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F0D99B"/>
+      <stop offset="0.45" stop-color="#C9A45D"/>
+      <stop offset="1" stop-color="#9B7536"/>
+    </linearGradient>
+  </defs>
+  <path d="M54 8h52l46 46v52l-46 46H54L8 106V54L54 8Z" fill="none" stroke="url(#gold)" stroke-width="2"/>
+  <path d="M58 16h44l42 42v44l-42 42H58l-42-42V58l42-42Z" fill="none" stroke="url(#gold)" stroke-width="0.75" opacity="0.62"/>
+  <path d="M31 80h98M80 31v98" stroke="url(#gold)" stroke-width="0.6" opacity="0.28"/>
+  <circle cx="80" cy="80" r="55" fill="none" stroke="url(#gold)" stroke-width="0.9" opacity="0.72"/>
+  <path d="M44 42v73h31" fill="none" stroke="url(#gold)" stroke-width="7" stroke-linecap="square" stroke-linejoin="miter"/>
+  <path d="M72 42h14c18 0 28 7 28 19 0 11-8 18-24 19 19 1 29 8 29 20 0 10-9 15-18 15H72V42Z" fill="none" stroke="url(#gold)" stroke-width="7" stroke-linejoin="miter"/>
+  <path d="M72 80h18" stroke="url(#gold)" stroke-width="7"/>
+  <path d="M36 124h88" stroke="url(#gold)" stroke-width="1" opacity="0.72"/>
+  <circle cx="28" cy="80" r="2" fill="#C9A45D"/>
+  <circle cx="132" cy="80" r="2" fill="#C9A45D"/>
+</svg>

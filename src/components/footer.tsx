@@ -1,10 +1,12 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
   return (
     <footer className="siteFooter">
       <div className="footerTop">
         <div>
+          <Image className="footerLogo" src="/brand/luca-brasi-monogram.svg" alt="Luca Brasi International" width={72} height={72} />
           <span className="eyebrow">Luca Brasi International</span>
           <h2>Quiet confidence,<br />beautifully made.</h2>
         </div>

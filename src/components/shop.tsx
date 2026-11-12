@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Image from "next/image";
 import { categories, products } from "@/data/catalog";
 import { SearchIcon, ShieldIcon, TruckIcon } from "@/components/icons";
 import { ProductCard } from "@/components/product-card";
@@ -117,7 +118,7 @@ export function Shop() {
       </section>
 
       <section className="brandStatement">
-        <span className="brandStatementMark">LB</span>
+        <Image className="brandStatementMark" src="/brand/luca-brasi-monogram.svg" width={290} height={290} alt="" aria-hidden="true" />
         <p>“Style is not the loudest thing in the room.<br />It is the thing the room remembers.”</p>
         <span>Luca Brasi International</span>
       </section>
